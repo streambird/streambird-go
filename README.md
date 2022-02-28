@@ -46,7 +46,7 @@ Please see the other examples for a complete overview of all the available API c
 
 ## Errors
 
-All other packages return `streambird.ErrorResponse` structs that contain a error message in `streambird.ErrorMessage`, error type in `streambird.ErrorType`, and HTTP status code in `streambird.StatusCode`.
+All other packages return `streambird.ErrorResponse` structs that contain a error message in `ErrorResponse.ErrorMessage`, error type in `ErrorResponse.ErrorType`, and HTTP status code in `ErrorResponse.StatusCode`.
 
 ## API Reference
 

@@ -9,7 +9,6 @@ import (
 )
 
 type Client struct {
-	AccessKey  string // The API access key.
 	client     *streambird.Client
 	MagicLinks *magiclink.Client
 }
@@ -29,10 +28,8 @@ func New(apiKey string) *Client {
 	magiclink := &magiclink.Client{
 		C: client,
 	}
-
 	return &Client{
 		client:     client,
 		MagicLinks: magiclink,
 	}
-
 }

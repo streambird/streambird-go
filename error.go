@@ -18,10 +18,9 @@ func (e Error) Error() string {
 
 // ErrorResponse represents errored API response.
 type ErrorResponse struct {
-	Errors       []Error `json:"errors"`
-	ErrorMessage string  `json:"error_message"`
-	ErrorType    string  `json:"error_type"`
-	StatusCode   int64   `json:"status_code"`
+	ErrorMessage string `json:"error_message"`
+	ErrorType    string `json:"error_type"`
+	StatusCode   int64  `json:"status_code"`
 }
 
 // Error implements error interface.
