@@ -15,9 +15,9 @@ type Client struct {
 const path = "auth/magic_links"
 
 // Create a magic link token for the given UserID
-func (c *Client) Create(createReq *streambird.MagicLinkCreateReq) (*streambird.MagicLinkCreateResp, error) {
+func (c *Client) Create(createReq *streambird.MagicLinkCreateRequest) (*streambird.MagicLinkCreateResponse, error) {
 
-	resp := &streambird.MagicLinkCreateResp{}
+	resp := &streambird.MagicLinkCreateResponse{}
 	if err := c.C.Request(resp, http.MethodPost, fmt.Sprintf("%s/create", path), createReq); err != nil {
 		return nil, err
 	}

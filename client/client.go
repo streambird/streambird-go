@@ -6,11 +6,13 @@ import (
 
 	streambird "github.com/streambird/streambird-go/v1"
 	magiclink "github.com/streambird/streambird-go/v1/magiclink"
+	otp "github.com/streambird/streambird-go/v1/otp"
 )
 
 type Client struct {
 	client     *streambird.Client
 	MagicLinks *magiclink.Client
+	OTPs       *otp.Client
 }
 
 func (c *Client) SetDebugLog(debugLog *log.Logger) {
@@ -28,8 +30,12 @@ func New(apiKey string) *Client {
 	magiclink := &magiclink.Client{
 		C: client,
 	}
+	otp := &otp.Client{
+		C: client,
+	}
 	return &Client{
 		client:     client,
 		MagicLinks: magiclink,
+		OTPs:       otp,
 	}
 }
